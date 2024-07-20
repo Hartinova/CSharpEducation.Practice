@@ -1,0 +1,7 @@
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\Release\Task.CSharpBase.exe.config
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\Release\Task.CSharpBase.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\Release\Task.CSharpBase.pdb
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\Release\Task1A.csproj.AssemblyReference.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\Release\Task1A.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\Release\Task.CSharpBase.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\Release\Task.CSharpBase.pdb

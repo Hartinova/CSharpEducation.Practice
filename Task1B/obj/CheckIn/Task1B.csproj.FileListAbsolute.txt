@@ -1,0 +1,10 @@
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\bin\CheckIn\Task1B.exe.config
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\bin\CheckIn\Task1B.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\bin\CheckIn\Task1B.pdb
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\obj\CheckIn\Task1B.csproj.AssemblyReference.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\obj\CheckIn\Task1B.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\obj\CheckIn\Task1B.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task1B\obj\CheckIn\Task1B.pdb
+C:\Users\Оксана\dotnet\task1BFolder\Task1B.exe.config
+C:\Users\Оксана\dotnet\task1BFolder\Task1B.exe
+C:\Users\Оксана\dotnet\task1BFolder\Task1B.pdb
