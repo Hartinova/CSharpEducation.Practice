@@ -11,8 +11,7 @@ namespace Task4
         static void Main(string[] args)
         {
             Console.WriteLine("Как вас зовут?");
-            string name=
-            Console.ReadLine();
+            string name= Console.ReadLine();
             Console.WriteLine($"Привет, {name}");
             Console.ReadLine();
         }
