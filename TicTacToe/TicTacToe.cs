@@ -1,166 +1,200 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace TicTacToe
 {
+  
+  /// <summary>
+  /// Репозиторий игры Крестики-нолики.
+  /// </summary>
+  public static class TicTacToe
+  {
     /// <summary>
-    /// репозиторий игры Крестики-нолики
+    /// Поле с ходами игроков 1 и 2.
     /// </summary>
-    public static class TicTacToe
+    public static string[,] PlayingField = CreatePlayingField();
+
+    /// <summary>
+    /// Текущий игрок.
+    /// </summary>
+    public static Gamer CurrentGamer = Gamer.First;
+
+
+    /// <summary>
+    /// Создать игровое поле 3 на 3.
+    /// </summary>
+    /// <returns>Числовой массив строк размерностью 3 на 3. Заполнен строками, определенными для пустых ячеек поля.</returns>
+    private static string[,] CreatePlayingField()
     {
-        /// <summary>
-        /// массив данных, введенных игроками 1 и 2
-        /// </summary>
-        public static string[,] TicTacToeArray = CreateBeginTicTacToe();
+      var result = new string[3, 3];
 
-        /// <summary>
-        /// свойство окончания игры
-        /// </summary>
-        public static Queue QueueGame = Queue.First;
-
-
-        /// <summary>
-        /// создание начального массива данных
-        /// </summary>
-        /// <returns></returns>
-        private static string[,] CreateBeginTicTacToe()
-        {
-            string[,] result = new string[3, 3];
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                { result[i, j] = Const.CharNull; }
-            }
-
-            return result;
+      for (int i = 0; i < 3; i++)
+      {
+        for (int j = 0; j < 3; j++)
+        { 
+          result[i, j] = Const.CharNull; 
         }
+      }
 
-       
-        /// <summary>
-        /// определить координаты и ввести значение
-        /// </summary>
-        /// <param name="inputStr"></param>
-        /// <param name="mess"></param>
-        /// <returns></returns>
-        public static bool SetCoordinate(string inputStr, out string mess)
-        {
-            var result = false;
-            mess = "Неверно заданы координаты.";
-
-            var arr = inputStr.Split(',');
-
-            if (arr.Count() != 2)
-            {
-                return false; 
-            }
-
-            if (int.TryParse(arr[0], out int i) && i > 0 && i <= 3)
-            {
-                if (int.TryParse(arr[1], out int j) && j > 0 && j <= 3)
-                {
-                    if (TicTacToeArray[i - 1, j - 1] == Const.CharNull)
-                    {
-                        TicTacToeArray[i - 1, j - 1] = (QueueGame == Queue.First) ? Const.CharGamer1 : Const.CharGamer2;
-                       
-                        mess = "";
-                        result = true;
-                    }
-                    else
-                    { mess = "В эту ячейку уже ввели данные. Выберите другую."; }
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// смена хода
-        /// </summary>
-        public static void ChangeQueue()
-        {  
-            QueueGame = (QueueGame == Queue.First) ? Queue.Second : Queue.First;
-        }
-
-        /// <summary>
-        /// проверка окончена ли игра
-        /// </summary>
-        /// <param name="mess">СООБЩЕНИЕ ДЛЯ ВЫВОДА ПОЛЬЗОВАТЕЛЮ    </param>
-        /// <returns>TRUE-ЕСЛИ ИГРА ОКОНЧЕНА</returns>
-        public static bool IsFinish(out string mess)
-        {
-            bool result = false;
-            mess = string.Empty;
-
-            if (IsWin(QueueGame))
-            {
-                mess = string.Format("Игра окончена победой {0} игрока.", (QueueGame == Queue.First) ? 1 : 2);
-                return true;
-            }
-
-            if (!ExistNullValue())
-            {
-                mess = "Игра окончена. Ничья.";
-                return true;
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// проверка на наличие пустых ячеек
-        /// </summary>
-        /// <param name="mess">сообщение для вывода пользователю</param>
-        /// <returns>true-если есть пустые ячейки</returns>
-        private static bool ExistNullValue()
-        {
-            bool result = false;
-
-            for (int i = 0; i < TicTacToeArray.GetLength(0); i++)
-            {
-                for (int j = 0; j < TicTacToeArray.GetLength(1); j++)
-                { 
-                    if (TicTacToeArray[i, j] == Const.CharNull)
-                    { return true; } 
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// проверка на выигрыш
-        /// </summary>
-        /// <param name="queue">чья очередь</param>
-        /// <returns>true - если текущий игрок выиграл</returns>
-        private static bool IsWin(Queue queue)
-        {
-            bool result = false;
-            string charGamer = (queue == Queue.First) ? Const.CharGamer1 : Const.CharGamer2;
-
-            //поиск по строкам
-            for (int i = 0; i < TicTacToeArray.GetLength(0); i++)
-            {
-                if (TicTacToeArray[i, 0] == charGamer && TicTacToeArray[i, 1] == charGamer && TicTacToeArray[i, 2] == charGamer)
-                { return true; }
-            }
-
-            //поиск по колонкам
-            for (int j = 0; j < TicTacToeArray.GetLength(1); j++)
-            {
-                if (TicTacToeArray[0, j] == charGamer && TicTacToeArray[1, j] == charGamer && TicTacToeArray[2, j] == charGamer)
-                { return true; } 
-            }
-
-            // по диагонали
-            if (TicTacToeArray[0, 0] == charGamer && TicTacToeArray[1, 1] == charGamer && TicTacToeArray[2, 2] == charGamer)
-            { return true; }
-            if (TicTacToeArray[0, 2] == charGamer && TicTacToeArray[1, 1] == charGamer && TicTacToeArray[2, 0] == charGamer)
-            { return true; }
-
-            return result;
-        }
+      return result;
     }
+
+
+    /// <summary>
+    /// Выполнить ход.
+    /// </summary>
+    /// <param name="inputString">Входные данные ,полученные строкой из консоли в формате int,int через запятую.</param>
+    /// <param name="message">Сообщение для пользователя.</param>
+    /// <returns>True, при успешной обработке строки, введенной пользователем. Иначе - false.</returns>
+    public static bool Execute(string inputString, out string message)
+    { 
+      var result = false;
+      message = "Неверно заданы координаты.";
+      
+      //Преобразование входной строки в массив строк с координатами - должен получиться массив из 2 элементов при правильном вводе данных пользователем.
+      var coordinate = inputString.Split(',');
+
+      if (coordinate.Count() != 2)
+      { 
+        return false; 
+      }
+
+      //Проверка, правильно ли задана строка.
+      if (int.TryParse(coordinate[0], out int row) && row > 0 && row <= 3)
+      {
+        //Проверка, правильно ли задана колонка.
+        if (int.TryParse(coordinate[1], out int column) && column > 0 && column <= 3)
+        {
+          //Выполнение хода.
+          result = SetMove(row, column, out message);
+        }
+      }
+      return result;
+    }
+
+    /// <summary>
+    /// Сделать ход.
+    /// </summary>
+    /// <param name="row">Номер строки.</param>
+    /// <param name="column">Номер колонки.</param>
+    /// <param name="message">Сообщение для пользователя.</param>
+    /// <returns>True, при успешном выполнении хода. Иначе - false.</returns>
+    public static bool SetMove(int row, int column, out string message)
+    {
+      var result = false;
+      message = string.Empty;
+
+      if (PlayingField[row - 1, column - 1] == Const.CharNull)
+      {
+        PlayingField[row - 1, column - 1] = (CurrentGamer == Gamer.First) ? Const.CharGamer1 : Const.CharGamer2;
+        result = true;
+      }
+      else
+      { message = "В эту ячейку уже ввели данные. Выберите другую."; }
+
+      return result;
+    }
+
+    /// <summary>
+    /// Сменить текущего пользователя.
+    /// </summary>
+    public static void ChangeGamer()
+    {
+      CurrentGamer = (CurrentGamer == Gamer.First) ? Gamer.Second : Gamer.First;
+    }
+
+    /// <summary>
+    /// Проверить окончена ли игра.
+    /// </summary>
+    /// <param name="mess">Сообщение для вывода пользователю.</param>
+    /// <returns>True, если игра окончена. Иначе - false.</returns>
+    public static bool IsFinish(out string mess)
+    {
+      bool result = false;
+      mess = string.Empty;
+
+      //Если выиграл текущий игрок, то игра окончена
+      if (IsWin(CurrentGamer))
+      {
+        mess = string.Format("Игра окончена победой {0} игрока.", (CurrentGamer == Gamer.First) ? 1 : 2);
+        return true;
+      }
+
+      //Если не осталось пустых ячеек на игровом поле, то игра окончена.
+      if (!ExistNullValue())
+      {
+        mess = "Игра окончена. Ничья.";
+        return true;
+      }
+
+      return result;
+    }
+
+    /// <summary>
+    /// Проверить на наличие пустых ячеек.
+    /// </summary>
+    /// <param name="mess">Сообщение для вывода пользователю.</param>
+    /// <returns>True-если есть пустые ячейки. Иначе - false.</returns>
+    private static bool ExistNullValue()
+    {
+      bool result = false;
+
+      for (int i = 0; i < PlayingField.GetLength(0); i++)
+      {
+        for (int j = 0; j < PlayingField.GetLength(1); j++)
+        {
+          if (PlayingField[i, j] == Const.CharNull)
+          { 
+            return true; 
+          }
+        }
+      }
+
+      return result;
+    }
+
+    /// <summary>
+    /// Проверить на выигрыш.
+    /// </summary>
+    /// <param name="gamer">Текущий игрок.</param>
+    /// <returns>True, если текущий игрок выиграл. Иначе - false.</returns>
+    private static bool IsWin(Gamer gamer)
+    {
+      var result = false;
+
+      //Символ, которым ходит текущий игрок.
+      string charGamer = (gamer == Gamer.First) ? Const.CharGamer1 : Const.CharGamer2;
+
+      //Поиск выигрышной строки.
+      for (int i = 0; i < PlayingField.GetLength(0); i++)
+      {
+        if (PlayingField[i, 0] == charGamer && PlayingField[i, 1] == charGamer && PlayingField[i, 2] == charGamer)
+        { 
+          return true; 
+        }
+      }
+
+      //Поиск выигрышной колонки.
+      for (int j = 0; j < PlayingField.GetLength(1); j++)
+      {
+        if (PlayingField[0, j] == charGamer && PlayingField[1, j] == charGamer && PlayingField[2, j] == charGamer)
+        {
+          return true; 
+        }
+      }
+
+      //Поиск выигрышной диагонали.
+      if (PlayingField[0, 0] == charGamer && PlayingField[1, 1] == charGamer && PlayingField[2, 2] == charGamer)
+      { 
+        return true; 
+      }
+
+      if (PlayingField[0, 2] == charGamer && PlayingField[1, 1] == charGamer && PlayingField[2, 0] == charGamer)
+      {
+        return true; 
+      }
+
+      return result;
+    }
+  }
 }
