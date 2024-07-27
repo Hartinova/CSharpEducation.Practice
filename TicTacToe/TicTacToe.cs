@@ -10,6 +10,10 @@ namespace TicTacToe
   public static class TicTacToe
   {
     /// <summary>
+    /// Размерность поля для игры.
+    /// </summary>
+    public static int Dim = 3;
+    /// <summary>
     /// Поле с ходами игроков 1 и 2.
     /// </summary>
     public static string[,] PlayingField = CreatePlayingField();
@@ -21,16 +25,16 @@ namespace TicTacToe
 
 
     /// <summary>
-    /// Создать игровое поле 3 на 3.
+    /// Создать игровое поле.
     /// </summary>
-    /// <returns>Числовой массив строк размерностью 3 на 3. Заполнен строками, определенными для пустых ячеек поля.</returns>
+    /// <returns>Числовой массив строк . Заполнен строками, определенными для пустых ячеек поля.</returns>
     private static string[,] CreatePlayingField()
     {
-      var result = new string[3, 3];
+      var result = new string[Dim, Dim];
 
-      for (int i = 0; i < 3; i++)
+      for (int i = 0; i < Dim; i++)
       {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < Dim; j++)
         { 
           result[i, j] = Const.CharNull; 
         }
@@ -54,16 +58,16 @@ namespace TicTacToe
       //Преобразование входной строки в массив строк с координатами - должен получиться массив из 2 элементов при правильном вводе данных пользователем.
       var coordinate = inputString.Split(',');
 
-      if (coordinate.Count() != 2)
+      if (coordinate.Count() != PlayingField.Rank)
       { 
         return false; 
       }
 
       //Проверка, правильно ли задана строка.
-      if (int.TryParse(coordinate[0], out int row) && row > 0 && row <= 3)
+      if (int.TryParse(coordinate[0], out int row) && row > 0 && row <= Dim)
       {
         //Проверка, правильно ли задана колонка.
-        if (int.TryParse(coordinate[1], out int column) && column > 0 && column <= 3)
+        if (int.TryParse(coordinate[1], out int column) && column > 0 && column <= Dim)
         {
           //Выполнение хода.
           result = SetMove(row, column, out message);
