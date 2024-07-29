@@ -1,0 +1,7 @@
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\bin\Debug\Prctice2.Task25.exe.config
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\bin\Debug\Prctice2.Task25.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\bin\Debug\Prctice2.Task25.pdb
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\obj\Debug\Prctice2.Task25.csproj.AssemblyReference.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\obj\Debug\Prctice2.Task25.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\obj\Debug\Prctice2.Task25.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task25\obj\Debug\Prctice2.Task25.pdb

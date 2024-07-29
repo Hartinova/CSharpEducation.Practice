@@ -1,0 +1,7 @@
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\bin\Debug\Prctice2.Task23.exe.config
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\bin\Debug\Prctice2.Task23.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\bin\Debug\Prctice2.Task23.pdb
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\obj\Debug\Prctice2.Task23.csproj.AssemblyReference.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\obj\Debug\Prctice2.Task23.csproj.CoreCompileInputs.cache
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\obj\Debug\Prctice2.Task23.exe
+C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task23\obj\Debug\Prctice2.Task23.pdb
