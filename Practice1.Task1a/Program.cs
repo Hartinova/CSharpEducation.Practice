@@ -11,7 +11,7 @@ namespace Practice1.Task1a
     static void Main(string[] args)
     {
       var length = 5;
-      var j = 0;
+      var j = 0; 
       var message = string.Empty;
 
       //a. Цикл for.

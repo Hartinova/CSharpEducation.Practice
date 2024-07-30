@@ -1,7 +1,0 @@
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\bin\Debug\Task4.exe.config
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\bin\Debug\Task4.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\bin\Debug\Task4.pdb
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\obj\Debug\Task4.csproj.AssemblyReference.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\obj\Debug\Task4.csproj.CoreCompileInputs.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\obj\Debug\Task4.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Task4\obj\Debug\Task4.pdb

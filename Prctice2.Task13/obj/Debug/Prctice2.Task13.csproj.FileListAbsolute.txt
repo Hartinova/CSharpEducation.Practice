@@ -1,7 +1,0 @@
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\bin\Debug\Prctice2.Task13.exe.config
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\bin\Debug\Prctice2.Task13.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\bin\Debug\Prctice2.Task13.pdb
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\obj\Debug\Prctice2.Task13.csproj.AssemblyReference.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\obj\Debug\Prctice2.Task13.csproj.CoreCompileInputs.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\obj\Debug\Prctice2.Task13.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice2\Prctice2.Task13\obj\Debug\Prctice2.Task13.pdb

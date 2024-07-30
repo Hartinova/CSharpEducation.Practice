@@ -24,6 +24,8 @@ bld/
 [Oo]bj/
 */bin/
 */obj/
+Practice1.Task1a/bin/
+Practice1.Task1a/obj/
 
 # Roslyn cache directories
 *.ide/

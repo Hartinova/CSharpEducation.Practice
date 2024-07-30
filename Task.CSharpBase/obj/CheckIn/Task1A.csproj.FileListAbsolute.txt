@@ -1,7 +1,0 @@
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\CheckIn\Task.CSharpBase.exe.config
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\CheckIn\Task.CSharpBase.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\bin\CheckIn\Task.CSharpBase.pdb
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\CheckIn\Task1A.csproj.AssemblyReference.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\CheckIn\Task1A.csproj.CoreCompileInputs.cache
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\CheckIn\Task.CSharpBase.exe
-C:\Users\Оксана\dotnet\CSharpEducation.Practice\Task.CSharpBase\obj\CheckIn\Task.CSharpBase.pdb
